@@ -4,12 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:orion_talk_widget/OrionTalkActions.dart';
 
+/// # OrionTalkWidget
+/// Implements the flutter user interface for Orion Talk Service
+///
 class OrionTalkWidget extends StatelessWidget {
-  TextEditingController _sendMessageController;
+  final TextEditingController _sendMessageController =
+      new TextEditingController();
 
-  OrionTalkWidget() {
-    this._sendMessageController = TextEditingController();
-  }
+  OrionTalkWidget() {}
 
   @override
   Widget build(BuildContext context) {
@@ -30,17 +32,20 @@ class OrionTalkWidget extends StatelessWidget {
           ),
           new CupertinoTextField(
               placeholder: "message", controller: _sendMessageController),
-          new MessageWidget("orion"),
+          new TextMessageWidget("orion"),
         ],
       )),
     );
   }
 }
 
-class MessageWidget extends StatelessWidget {
+/// # TextMessageWidget
+/// Implements the container to wrapper the message
+///
+class TextMessageWidget extends StatelessWidget {
   String _text;
 
-  MessageWidget(String text) {
+  TextMessageWidget(String text) {
     this._text = text;
   }
 

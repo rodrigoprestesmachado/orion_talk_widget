@@ -1,5 +1,6 @@
 name: orion_talk_widget
-description: The Orion Talk widget for apps build with flutter.
+description: The Orion Talk Widget (UI) can be used to implement flutter apps. This UI has a relation with Orion Talk Service available in 
+https://github.com/rodrigoprestesmachado/orion-talk-service
 version: 0.0.1
 homepage: https://github.com/rodrigoprestesmachado/orion_talk_widget
 
